@@ -5,7 +5,7 @@
  * 
  */
 module.exports = {
-  projectName: '$NAME$',        //项目名称
+  projectName: '{{name}}',        //项目名称
   projectGroup: '',         //项目所属组    base crm  app paas等
   moduleSeparator: '-',         //用于指定生成tpl_config的key时所用的模块分隔符，   目前paas采用”-“ 其他项目好像是”_“
   devDirectory: 'dev',          //开发目录

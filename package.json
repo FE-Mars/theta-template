@@ -1,7 +1,7 @@
 {
-  "name": "myproject",
-  "version": "1.0.0",
-  "description": "",
+  "name": "{{name}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
   "main": "",
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.dev.config.js --hot --inline",
