@@ -1,0 +1,38 @@
+// https://eslint.org/docs/user-guide/configuring
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "plugin:prettier/recommended",
+    "eslint:recommended"
+  ],
+  "plugins": ["prettier", "vue", "json"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "amd": true
+  },
+  "globals": {
+    "Vue": true,
+    "FS": true,
+    "CRM": true,
+    "$t": true,
+    "$": true,
+    "_": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": "off",
+    "vue/no-async-in-computed-properties": 1, // 计算属性应该是同步的。其中的异步操作可能无法按预期工作，并可能导致意外行为，这就是您应该避免它们的原因。如果您需要异步计算属性，可能需要考虑使用其他插件[vue-async-computed]
+    "vue/no-side-effects-in-computed-properties": 1, // 在计算属性中引入副作用被认为是一种非常糟糕的做法。它使代码无法预测且难以理解。
+    "vue/no-reserved-keys": 1, // 此规则阻止使用保留名称以避免冲突和意外行为。
+    "vue/require-v-for-key": 2, // 当v-for写在自定义组件上时，它需要同时使用v-bind：key。在其他元素上，v-bind：key也最好写。
+    "vue/require-valid-default-prop": 1 // 此规则检查每个prop的默认值是否对给定类型有效。当使用函数未返回类型Array或Object的默认值时，它应报告错误。
+  }
+}
